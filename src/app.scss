@@ -72,6 +72,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #app {
   position: relative;
   width: 100%;
