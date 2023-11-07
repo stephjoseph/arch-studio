@@ -1,20 +1,17 @@
 <script>
-import { Router, Link, Route } from "svelte-routing";
-import Home from "./routes/Home.svelte";
-import Portfolio from "./routes/Portfolio.svelte";
-import About from "./routes/About.svelte";
-import Contact from "./routes/Contact.svelte";
+  import { Router, Route } from "svelte-routing";
+  import Home from "./routes/Home.svelte";
+  import Portfolio from "./routes/Portfolio.svelte";
+  import About from "./routes/About.svelte";
+  import Contact from "./routes/Contact.svelte";
+  import HeaderMobile from "./lib/HeaderMobile.svelte";
 
-export let url = "";
+  export let url = "";
 </script>
 
 <Router {url}>
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="/portfolio">Portfolio</Link>
-    <Link to="/about">About</Link>
-    <Link to="/contact">Contact</Link>
-  </nav>
+  <HeaderMobile />
+
   <div>
     <Route path="/"><Home /></Route>
     <Route path="/portfolio" component={Portfolio} />
