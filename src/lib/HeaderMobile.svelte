@@ -3,6 +3,7 @@
   import { Link } from "svelte-routing";
   import logo from "../assets/logo.svg";
   import iconHamburger from "../assets/icons/icon-hamburger.svg";
+  import { fly } from "svelte/transition";
 
   let isNavOpen = false;
 
@@ -39,19 +40,21 @@
     <img src={iconHamburger} alt="hamburger icon" />
   </button>
 
-  <nav class="header__nav" class:active={isNavOpen}>
-    <ul>
-      <li>
-        <Link to="/portfolio" on:click={toggleNav}>Portfolio</Link>
-      </li>
-      <li>
-        <Link to="/about" on:click={toggleNav}>About</Link>
-      </li>
-      <li>
-        <Link to="/contact" on:click={toggleNav}>Contact</Link>
-      </li>
-    </ul>
-  </nav>
+  {#if isNavOpen}
+    <nav transition:fly={{ duration: 400, x: "100%" }} class="header__nav">
+      <ul>
+        <li>
+          <Link to="/portfolio" on:click={toggleNav}>Portfolio</Link>
+        </li>
+        <li>
+          <Link to="/about" on:click={toggleNav}>About</Link>
+        </li>
+        <li>
+          <Link to="/contact" on:click={toggleNav}>Contact</Link>
+        </li>
+      </ul>
+    </nav>
+  {/if}
 </header>
 
 <style lang="scss">
@@ -103,18 +106,10 @@
       transition:
         opacity 0.3s ease,
         transform 0.3s ease;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateX(100%);
+
       padding: 40px 48px;
       background: var(--very-light-grey);
       width: 343px;
-
-      &.active {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(0%);
-      }
 
       ul {
         list-style-type: none;
