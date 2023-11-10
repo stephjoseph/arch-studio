@@ -1,9 +1,9 @@
 <script>
-  // your script goes here
+  import HomeHero from "../lib/HomeHero.svelte";
 </script>
 
 <main>
-  <h1>Home</h1>
+  <HomeHero />
 </main>
 
 <style>
