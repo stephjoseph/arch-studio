@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #fff;
 
     h1 {
       position: absolute;
