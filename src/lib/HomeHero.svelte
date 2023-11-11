@@ -119,7 +119,7 @@
         }
 
         &__button {
-          width: 252px;
+          width: max-content;
           height: 72px;
           padding: 24px 32px 24px 37px;
           color: #fff;
@@ -130,7 +130,7 @@
           background: var(--very-dark-blue);
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          gap: 24px;
 
           &:hover {
             background: var(--dark-grey);

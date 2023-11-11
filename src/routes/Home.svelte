@@ -1,12 +1,14 @@
 <script>
   import HomeHero from "../lib/HomeHero.svelte";
   import HomeWelcome from "../lib/HomeWelcome.svelte";
+  import HomeSmallTeam from "../lib/HomeSmallTeam.svelte";
 </script>
 
 <main>
   <h1>Arch Studio</h1>
   <HomeHero />
   <HomeWelcome />
+  <HomeSmallTeam />
 </main>
 
 <style lang="scss">
