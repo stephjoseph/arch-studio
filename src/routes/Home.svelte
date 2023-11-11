@@ -2,6 +2,7 @@
   import HomeHero from "../lib/HomeHero.svelte";
   import HomeWelcome from "../lib/HomeWelcome.svelte";
   import HomeSmallTeam from "../lib/HomeSmallTeam.svelte";
+  import HomeFeatured from "../lib/HomeFeatured.svelte";
 </script>
 
 <main>
@@ -9,6 +10,7 @@
   <HomeHero />
   <HomeWelcome />
   <HomeSmallTeam />
+  <HomeFeatured />
 </main>
 
 <style lang="scss">

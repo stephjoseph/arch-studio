@@ -20,9 +20,16 @@
     background: url("/src/assets/home/mobile/image-small-team.jpg"),
       rgba(0, 0, 0, 0.35);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: bottom;
     background-blend-mode: multiply;
+    transition-property: background-size;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 1000ms;
+
+    &:hover {
+      background-size: 120%;
+    }
 
     h2 {
       color: #fff;
