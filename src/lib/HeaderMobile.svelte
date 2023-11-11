@@ -110,6 +110,7 @@
       padding: 40px 48px;
       background: var(--very-light-grey);
       width: 343px;
+      z-index: 9999;
 
       ul {
         list-style-type: none;

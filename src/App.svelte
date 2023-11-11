@@ -1,5 +1,6 @@
 <script>
   import { Router, Route } from "svelte-routing";
+
   import Home from "./routes/Home.svelte";
   import Portfolio from "./routes/Portfolio.svelte";
   import About from "./routes/About.svelte";
@@ -12,12 +13,10 @@
 <Router {url}>
   <HeaderMobile />
 
-  <div>
-    <Route path="/"><Home /></Route>
-    <Route path="/portfolio" component={Portfolio} />
-    <Route path="/about" component={About} />
-    <Route path="/contact" component={Contact} />
-  </div>
+  <Route path="/"><Home /></Route>
+  <Route path="/portfolio" component={Portfolio} />
+  <Route path="/about" component={About} />
+  <Route path="/contact" component={Contact} />
 </Router>
 
 <style lang="scss">
