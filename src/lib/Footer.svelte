@@ -14,7 +14,7 @@
         <a href="/portfolio" use:link>Portfolio</a>
       </li>
       <li>
-        <a href="/about-us" use:link>About Us</a>
+        <a href="/about" use:link>About Us</a>
       </li>
       <li>
         <a href="/contact" use:link>Contact</a>
