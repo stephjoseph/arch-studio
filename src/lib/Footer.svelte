@@ -14,10 +14,10 @@
         <a href="/portfolio" use:link>Portfolio</a>
       </li>
       <li>
-        <a href="/portfolio" use:link>About Us</a>
+        <a href="/about-us" use:link>About Us</a>
       </li>
       <li>
-        <a href="/portfolio" use:link>Contact</a>
+        <a href="/contact" use:link>Contact</a>
       </li>
     </ul>
   </nav>
