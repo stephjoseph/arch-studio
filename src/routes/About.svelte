@@ -1,10 +1,12 @@
 <script>
   import AboutHero from "../lib/AboutHero.svelte";
+  import AboutOurHeritage from "../lib/AboutOurHeritage.svelte";
 </script>
 
 <main>
   <h1>Arch Studio | About</h1>
   <AboutHero />
+  <AboutOurHeritage />
 </main>
 
 <style lang="scss">
