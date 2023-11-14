@@ -3,12 +3,13 @@
   import { Link } from "svelte-routing";
   import logo from "../assets/logo.svg";
   import iconHamburger from "../assets/icons/icon-hamburger.svg";
-  import { fly } from "svelte/transition";
+  import { fly, fade } from "svelte/transition";
 
   let isNavOpen = false;
 
   const toggleNav = () => {
     isNavOpen = !isNavOpen;
+    document.body.classList.toggle("noscroll");
   };
 
   onMount(() => {
@@ -18,6 +19,7 @@
 
       if (!nav.contains(event.target) && !button.contains(event.target)) {
         isNavOpen = false;
+        document.body.classList.remove("noscroll");
       }
     }
 
@@ -54,6 +56,7 @@
         </li>
       </ul>
     </nav>
+    <div transition:fade class="header__overlay"></div>
   {/if}
 </header>
 
@@ -65,7 +68,6 @@
     justify-content: space-between;
     padding: 32px;
     position: relative;
-
     &__logo {
       width: 77px;
       height: 32px;
@@ -126,6 +128,20 @@
           line-height: 40px;
         }
       }
+    }
+
+    &__overlay {
+      display: block;
+      position: fixed;
+      top: 96px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none;
+      z-index: 10;
     }
   }
 
