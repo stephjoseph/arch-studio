@@ -362,6 +362,11 @@ kleur@^4.1.5:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
 
+leaflet@^1.9.3, leaflet@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.9.4.tgz#23fae724e282fa25745aff82ca4d394748db7d8d"
+  integrity sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==
+
 locate-character@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/locate-character/-/locate-character-3.0.0.tgz#0305c5b8744f61028ef5d01f444009e00779f974"
@@ -464,6 +469,13 @@ svelte-hmr@^0.15.3:
   version "0.15.3"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.15.3.tgz#df54ccde9be3f091bf5f18fc4ef7b8eb6405fbe6"
   integrity sha512-41snaPswvSf8TJUhlkoJBekRrABDXDMdpNpT2tfHIv4JuhgvHqLMhEPGtaQn0BmbNSTkuz2Ed20DF2eHw0SmBQ==
+
+svelte-leafletjs@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/svelte-leafletjs/-/svelte-leafletjs-0.10.0.tgz#ccc90be923c98e58f001df1ee70e6b861ec4ff32"
+  integrity sha512-xKIwHZAsdI2EoYvSEp4IDAeLFTaWx/e+gPs7G3Z6MLHNcFieDRKjVHgLt9ilM+xpw1A8Cx0qbtwrfdCYwWfG8g==
+  dependencies:
+    leaflet "^1.9.3"
 
 svelte-routing@^2.6.0:
   version "2.6.0"
