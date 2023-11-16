@@ -17,9 +17,11 @@
       const nav = document.querySelector(".header__nav");
       const button = document.querySelector(".header__hamburger");
 
-      if (!nav.contains(event.target) && !button.contains(event.target)) {
-        isNavOpen = false;
-        document.body.classList.remove("noscroll");
+      if (isNavOpen) {
+        if (!nav.contains(event.target) && !button.contains(event.target)) {
+          isNavOpen = false;
+          document.body.classList.remove("noscroll");
+        }
       }
     }
 
