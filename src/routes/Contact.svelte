@@ -2,6 +2,7 @@
   import ContactHero from "../lib/ContactHero.svelte";
   import ContactDetails from "../lib/ContactDetails.svelte";
   import ContactMap from "../lib/ContactMap.svelte";
+  import ContactForm from "../lib/ContactForm.svelte";
 </script>
 
 <main>
@@ -9,6 +10,7 @@
   <ContactHero />
   <ContactDetails />
   <ContactMap />
+  <ContactForm />
 </main>
 
 <style lang="scss">

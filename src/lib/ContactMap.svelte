@@ -40,7 +40,7 @@
 
 <style>
   .contact-map {
-    width: 100%;
+    width: 100vw;
     /* height: 97.87vw; */
     height: 367px;
   }
