@@ -64,7 +64,7 @@
   };
 </script>
 
-<div class="home-hero">
+<section class="home-hero">
   <swiper-container
     class="swiper-container"
     slides-per-view={1}
@@ -90,7 +90,7 @@
       >
     {/each}
   </swiper-container>
-</div>
+</section>
 
 <style lang="scss">
   .home-hero {
@@ -171,6 +171,7 @@
   @media screen and (min-width: 768px) {
     .home-hero {
       height: 720px;
+      padding: 0 96px;
 
       .swiper {
         &-slide {

@@ -30,10 +30,4 @@
       height: 0;
     }
   }
-
-  @media screen and (min-width: 768px) {
-    main {
-      padding: 0 96px;
-    }
-  }
 </style>
