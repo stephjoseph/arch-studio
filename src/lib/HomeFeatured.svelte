@@ -1,41 +1,73 @@
 <script>
+  import { onMount } from "svelte";
   import { link } from "svelte-routing";
   import iconArrowWhite from "../assets/icons/icon-arrow-white.svg";
 
+  let windowWidth = window.innerWidth;
   const projects = [
     {
       title: "Project Del Sol",
-      image: { mobile: "/src/assets/portfolio/mobile/image-del-sol.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-del-sol.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-del-sol.jpg",
+      },
     },
     {
       title: "228B Tower",
-      image: { mobile: "/src/assets/portfolio/mobile/image-228b.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-228b.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-228b.jpg",
+      },
     },
     {
       title: "Le Prototype",
-      image: { mobile: "/src/assets/portfolio/mobile/image-prototype.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-prototype.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-prototype.jpg",
+      },
     },
   ];
+
+  // Update window width when the window is resized
+  onMount(() => {
+    window.addEventListener("resize", () => {
+      windowWidth = window.innerWidth;
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {});
+    };
+  });
 </script>
 
 <section class="home-featured">
-  <h2>Featured</h2>
+  <div class="home-featured__heading">
+    <h2>Featured</h2>
+    <a
+      class="home-featured__button home-featured__button--desktop"
+      href="/portfolio"
+      use:link>See All <img src={iconArrowWhite} alt="arrow icon" /></a
+    >
+  </div>
   <div class="home-featured__container">
     <div class="home-featured__projects">
       {#each projects as project, index (project)}
         <div
           class="home-featured__project"
-          style="background-image: url({window.innerWidth >= 768
+          style="background-image: url({windowWidth >= 768
             ? project.image.tablet
             : project.image.mobile})"
         >
           <h3>{project.title}</h3>
           <a href="/portfolio" use:link>View All Projects</a>
+          <div class="home-featured__project-number">{index + 1}</div>
         </div>
       {/each}
     </div>
-    <a class="home-featured__button" href="/portfolio" use:link
-      >See All <img src={iconArrowWhite} alt="arrow icon" /></a
+    <a
+      class="home-featured__button home-featured__button--mobile"
+      href="/portfolio"
+      use:link>See All <img src={iconArrowWhite} alt="arrow icon" /></a
     >
   </div>
 </section>
@@ -48,13 +80,19 @@
     gap: 44px;
     padding: 72px 32px 132px;
 
-    h2 {
-      color: var(--very-dark-blue);
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 52px;
-      letter-spacing: -1.714px;
+    &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        color: var(--very-dark-blue);
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 52px;
+        letter-spacing: -1.714px;
+      }
     }
 
     &__container {
@@ -86,6 +124,11 @@
       transition-property: background-size;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-duration: 600ms;
+      position: relative;
+
+      &-number {
+        display: none;
+      }
 
       &:hover {
         background-size: 120%;
@@ -110,7 +153,6 @@
     }
 
     &__button {
-      width: 100%;
       height: 72px;
       padding: 24px 32px 24px 37px;
       color: #fff;
@@ -130,6 +172,50 @@
 
       &:active {
         background: var(--light-grey);
+      }
+      &--mobile {
+        width: 100%;
+      }
+
+      &--desktop {
+        display: none;
+        width: 169px;
+        padding: 24px 32px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .home-featured {
+      gap: 88px;
+      padding: 207px 0px 200px;
+
+      &__project {
+        height: 31.25vw;
+        padding: 40px;
+
+        &-number {
+          display: block;
+          position: absolute;
+          top: 28px;
+          right: 16px;
+          color: #fff;
+          font-size: 250px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 200px;
+          letter-spacing: -5px;
+          opacity: 0.5;
+        }
+      }
+      &__button {
+        &--mobile {
+          display: none;
+        }
+
+        &--desktop {
+          display: flex;
+        }
       }
     }
   }
