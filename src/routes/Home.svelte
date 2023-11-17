@@ -17,7 +17,7 @@
 
 <style lang="scss">
   main {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,6 +28,12 @@
       visibility: hidden;
       width: 0;
       height: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    main {
+      padding: 0 96px;
     }
   }
 </style>

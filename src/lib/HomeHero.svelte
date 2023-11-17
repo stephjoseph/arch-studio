@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import { register } from "swiper/element/bundle";
   import { link } from "svelte-routing";
   import iconArrowWhite from "../assets/icons/icon-arrow-white.svg";
@@ -6,6 +7,7 @@
   register();
 
   let activeIndex = 0;
+  let windowWidth = window.innerWidth;
   let projects = [
     {
       title: "Project Paramour",
@@ -13,6 +15,7 @@
         "Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.",
       image: {
         mobile: "/src/assets/home/mobile/image-hero-paramour.jpg",
+        tablet: "/src/assets/home/tablet/image-hero-paramour.jpg",
       },
     },
     {
@@ -21,6 +24,7 @@
         "The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.",
       image: {
         mobile: "/src/assets/home/mobile/image-hero-seraph.jpg",
+        tablet: "/src/assets/home/tablet/image-hero-seraph.jpg",
       },
     },
     {
@@ -29,6 +33,7 @@
         "A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.",
       image: {
         mobile: "/src/assets/home/mobile/image-hero-federal.jpg",
+        tablet: "/src/assets/home/tablet/image-hero-federal.jpg",
       },
     },
     {
@@ -37,9 +42,21 @@
         "Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.",
       image: {
         mobile: "/src/assets/home/mobile/image-hero-trinity.jpg",
+        tablet: "/src/assets/home/tablet/image-hero-trinity.jpg",
       },
     },
   ];
+
+  // Update window width when the window is resized
+  onMount(() => {
+    window.addEventListener("resize", () => {
+      windowWidth = window.innerWidth;
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {});
+    };
+  });
 
   const onSlideChange = (e) => {
     console.log("slide changed");
@@ -58,7 +75,7 @@
       <swiper-slide
         ><div
           class="swiper-slide"
-          style="background-image: url({window.innerWidth >= 768
+          style="background-image: url({windowWidth >= 768
             ? project.image.tablet
             : project.image.mobile})"
         >
@@ -77,7 +94,7 @@
 
 <style lang="scss">
   .home-hero {
-    width: 100vw;
+    width: 100%;
     height: 560px;
 
     .swiper {
@@ -145,6 +162,29 @@
 
           &:active {
             background: var(--light-grey);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .home-hero {
+      height: 720px;
+
+      .swiper {
+        &-slide {
+          height: 720px;
+          padding: 0 56px;
+          justify-content: center;
+          gap: 40px;
+
+          &__content {
+            h2 {
+              font-size: 96px;
+              line-height: 80px;
+              letter-spacing: -2px;
+            }
           }
         }
       }
