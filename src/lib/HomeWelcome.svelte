@@ -80,7 +80,7 @@
 
   @media screen and (min-width: 768px) {
     .home-welcome {
-      padding: 248px 96px 232px;
+      padding: 248px 0px 232px;
 
       &__eyebrow {
         display: none;
@@ -90,7 +90,7 @@
         display: block;
         position: absolute;
         top: 90px;
-        left: 96px;
+        left: 0px;
         color: var(--very-light-grey);
         font-size: 156px;
         font-style: normal;

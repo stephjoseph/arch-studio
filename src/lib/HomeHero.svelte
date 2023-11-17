@@ -171,7 +171,7 @@
   @media screen and (min-width: 768px) {
     .home-hero {
       height: 720px;
-      padding: 0 96px;
+      padding: 0px;
 
       .swiper {
         &-slide {

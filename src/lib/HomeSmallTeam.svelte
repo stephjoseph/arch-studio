@@ -63,4 +63,22 @@
       }
     }
   }
+
+  @media screen and (min-width: 768px) {
+    .home-small-team {
+      padding: 168px 64px;
+      background: url("/src/assets/home/tablet/image-small-team.jpg"),
+        rgba(0, 0, 0, 0.35);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      background-blend-mode: multiply;
+
+      h2 {
+        font-size: 72px;
+        line-height: 64px;
+        letter-spacing: -2px;
+      }
+    }
+  }
 </style>
