@@ -5,37 +5,43 @@
 </script>
 
 <footer class="footer">
-  <a class="footer__logo" href="/" use:link
-    ><img src={logoWhite} alt="logo white" /></a
-  >
-  <nav class="footer__nav">
-    <ul>
-      <li>
-        <a href="/portfolio" use:link>Portfolio</a>
-      </li>
-      <li>
-        <a href="/about" use:link>About Us</a>
-      </li>
-      <li>
-        <a href="/contact" use:link>Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <a class="footer__button" href="/portfolio" use:link
-    >See Our Portfolio <img src={iconArrowWhite} alt="arrow icon" /></a
-  >
+  <div class="footer__wrapper">
+    <a class="footer__logo" href="/" use:link
+      ><img src={logoWhite} alt="logo white" /></a
+    >
+    <nav class="footer__nav">
+      <ul>
+        <li>
+          <a href="/portfolio" use:link>Portfolio</a>
+        </li>
+        <li>
+          <a href="/about" use:link>About Us</a>
+        </li>
+        <li>
+          <a href="/contact" use:link>Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="footer__button" href="/portfolio" use:link
+      >See Our Portfolio <img src={iconArrowWhite} alt="arrow icon" /></a
+    >
+  </div>
 </footer>
 
 <style lang="scss">
   .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    margin-top: -60px;
-    padding-bottom: 48px;
     width: 100%;
-    background: transparent;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      margin-top: -60px;
+      padding-bottom: 48px;
+      width: 100%;
+      background: transparent;
+      position: relative;
+    }
 
     &__logo {
       width: 120px;
@@ -86,6 +92,34 @@
 
       &:active {
         background: var(--light-grey);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer {
+      background-color: #fff;
+
+      &__wrapper {
+        width: 79.69%;
+        margin-top: 0px;
+        padding: 0;
+        background-color: var(--very-light-grey);
+        flex-direction: row;
+        width: calc(100% - 156px);
+        gap: 40px;
+      }
+
+      &__nav {
+        ul {
+          flex-direction: row;
+          gap: 56px;
+        }
+      }
+
+      &__button {
+        position: absolute;
+        right: -156px;
       }
     }
   }
