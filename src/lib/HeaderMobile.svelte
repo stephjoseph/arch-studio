@@ -14,8 +14,8 @@
 
   onMount(() => {
     function handleClick(event) {
-      const nav = document.querySelector(".header__nav");
-      const button = document.querySelector(".header__hamburger");
+      const nav = document.querySelector(".header-mobile__nav");
+      const button = document.querySelector(".header-mobile__hamburger");
 
       if (isNavOpen) {
         if (!nav.contains(event.target) && !button.contains(event.target)) {
@@ -33,19 +33,22 @@
   });
 </script>
 
-<header class="header">
-  <div class="header__logo">
+<header class="header-mobile">
+  <div class="header-mobile__logo">
     <Link to="/" on:click={() => (isNavOpen = false)}>
       <img src={logo} alt="logo" />
     </Link>
   </div>
 
-  <button class="header__hamburger" on:click={toggleNav}>
+  <button class="header-mobile__hamburger" on:click={toggleNav}>
     <img src={iconHamburger} alt="hamburger icon" />
   </button>
 
   {#if isNavOpen}
-    <nav transition:fly={{ duration: 400, x: "100%" }} class="header__nav">
+    <nav
+      transition:fly={{ duration: 400, x: "100%" }}
+      class="header-mobile__nav"
+    >
       <ul>
         <li>
           <Link to="/portfolio" on:click={toggleNav}>Portfolio</Link>
@@ -58,18 +61,19 @@
         </li>
       </ul>
     </nav>
-    <div transition:fade class="header__overlay"></div>
+    <div transition:fade class="header-mobile__overlay"></div>
   {/if}
 </header>
 
 <style lang="scss">
-  .header {
+  .header-mobile {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 32px;
     position: relative;
+    background: #fff;
     &__logo {
       width: 77px;
       height: 32px;
@@ -147,8 +151,8 @@
     }
   }
 
-  @media screen and (min-width: 1280px) {
-    .header {
+  @media screen and (min-width: 768px) {
+    .header-mobile {
       display: none;
     }
   }

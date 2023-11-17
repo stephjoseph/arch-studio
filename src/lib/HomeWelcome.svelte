@@ -3,6 +3,7 @@
 
 <section class="home-welcome">
   <div class="home-welcome__eyebrow"></div>
+  <span class="home-welcome__text">Welcome</span>
   <div class="home-welcome__content">
     <h2>Welcome to Arch Studio</h2>
     <div class="home-welcome__content-paragraphs">
@@ -33,11 +34,16 @@
     flex-direction: column;
     gap: 68px;
     padding: 72px 32px 112px 32px;
+    position: relative;
 
     &__eyebrow {
       width: 64px;
       height: 1px;
       background: var(--light-grey);
+    }
+
+    &__text {
+      display: none;
     }
 
     &__content {
@@ -67,6 +73,40 @@
           font-style: normal;
           font-weight: 500;
           line-height: 24px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .home-welcome {
+      padding: 248px 0px 232px;
+
+      &__eyebrow {
+        display: none;
+      }
+
+      &__text {
+        display: block;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        color: var(--very-light-grey);
+        font-size: 156px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 200px;
+        letter-spacing: -3px;
+      }
+
+      &__content {
+        gap: 44px;
+
+        h2 {
+          width: 77.43%;
+          font-size: 72px;
+          line-height: 64px;
+          letter-spacing: -2px;
         }
       }
     }
