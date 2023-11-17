@@ -6,6 +6,7 @@
   import About from "./routes/About.svelte";
   import Contact from "./routes/Contact.svelte";
   import HeaderMobile from "./lib/HeaderMobile.svelte";
+  import Header from "./lib/Header.svelte";
   import Footer from "./lib/Footer.svelte";
 
   export let url = "";
@@ -13,7 +14,7 @@
 
 <Router {url}>
   <HeaderMobile />
-
+  <Header />
   <Route path="/"><Home /></Route>
   <Route path="/portfolio" component={Portfolio} />
   <Route path="/about" component={About} />
