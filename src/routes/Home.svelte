@@ -1,4 +1,5 @@
 <script>
+  import PageName from "../lib/PageName.svelte";
   import HomeHero from "../lib/HomeHero.svelte";
   import HomeWelcome from "../lib/HomeWelcome.svelte";
   import HomeSmallTeam from "../lib/HomeSmallTeam.svelte";
@@ -7,6 +8,7 @@
 
 <main>
   <h1>Arch Studio</h1>
+  <PageName name="Home" />
   <HomeHero />
   <HomeWelcome />
   <HomeSmallTeam />
