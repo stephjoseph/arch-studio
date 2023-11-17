@@ -130,7 +130,8 @@
         display: none;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         background-size: 120%;
       }
 
