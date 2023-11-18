@@ -106,9 +106,10 @@
   @media screen and (min-width: 768px) {
     .about-hero {
       position: relative;
+      margin-bottom: 200px;
 
       &__img {
-        height: 93.75vw;
+        height: 720px;
       }
 
       &__content {
