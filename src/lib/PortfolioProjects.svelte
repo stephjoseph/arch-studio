@@ -1,66 +1,116 @@
 <script>
+  import { onMount } from "svelte";
+
+  let windowWidth = window.innerWidth;
   const projects = [
     {
       title: "Seraph Station",
       date: "September 2019",
-      image: { mobile: "/src/assets/portfolio/mobile/image-seraph.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-seraph.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-seraph.jpg",
+      },
     },
     {
       title: "Eebox Building",
       date: "August 2017",
-      image: { mobile: "/src/assets/portfolio/mobile/image-eebox.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-eebox.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-eebox.jpg",
+      },
     },
     {
       title: "Federal II Tower",
       date: "March 2017",
-      image: { mobile: "/src/assets/portfolio/mobile/image-federal.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-federal.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-federal.jpg",
+      },
     },
     {
       title: "Project Del Sol",
       date: "January 2016",
-      image: { mobile: "/src/assets/portfolio/mobile/image-del-sol.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-del-sol.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-del-sol.jpg",
+      },
     },
     {
       title: "Le Prototype",
       date: "October 2015",
-      image: { mobile: "/src/assets/portfolio/mobile/image-prototype.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-prototype.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-prototype.jpg",
+      },
     },
     {
       title: "228B Tower",
       date: "April 2015",
-      image: { mobile: "/src/assets/portfolio/mobile/image-228b.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-228b.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-228b.jpg",
+      },
     },
     {
       title: "Grand Edelweiss Hotel",
       date: "December 2013",
-      image: { mobile: "/src/assets/portfolio/mobile/image-edelweiss.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-edelweiss.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-edelweiss.jpg",
+      },
     },
     {
       title: "Netcry Tower",
       date: "August 2012",
-      image: { mobile: "/src/assets/portfolio/mobile/image-netcry.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-netcry.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-netcry.jpg",
+      },
     },
     {
       title: "Hypers",
       date: "January 2012",
-      image: { mobile: "/src/assets/portfolio/mobile/image-hypers.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-hypers.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-hypers.jpg",
+      },
     },
     {
       title: "SXIV Tower",
       date: "March 2011",
-      image: { mobile: "/src/assets/portfolio/mobile/image-sxiv.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-sxiv.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-sxiv.jpg",
+      },
     },
     {
       title: "Trinity Bank Tower",
       date: "September 2010",
-      image: { mobile: "/src/assets/portfolio/mobile/image-trinity.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-trinity.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-trinity.jpg",
+      },
     },
     {
       title: "Project Paramour",
       date: "February 2008",
-      image: { mobile: "/src/assets/portfolio/mobile/image-paramour.jpg" },
+      image: {
+        mobile: "/src/assets/portfolio/mobile/image-paramour.jpg",
+        tablet: "/src/assets/portfolio/tablet/image-paramour.jpg",
+      },
     },
   ];
+
+  // update window width when the window is resized
+  onMount(() => {
+    window.addEventListener("resize", () => {
+      windowWidth = window.innerWidth;
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {});
+    };
+  });
 </script>
 
 <section class="portfolio-projects">
@@ -69,7 +119,7 @@
       {#each projects as project, index (project)}
         <div
           class="portfolio-projects__project"
-          style="background-image: url({window.innerWidth >= 768
+          style="background-image: url({windowWidth >= 768
             ? project.image.tablet
             : project.image.mobile})"
         >
@@ -162,6 +212,17 @@
 
       &:active {
         background: var(--light-grey);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .portfolio-projects {
+      padding: 0px 0px 200px;
+
+      &__project {
+        height: 31.25vw;
+        padding: 40px;
       }
     }
   }
