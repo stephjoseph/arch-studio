@@ -78,6 +78,7 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: top;
         }
       }
 
@@ -100,6 +101,29 @@
           font-style: normal;
           font-weight: 500;
           line-height: 24px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .about-leaders {
+      padding: 0px 0px 240px;
+
+      h2 {
+        font-size: 72px;
+        line-height: 64px;
+        letter-spacing: -2px;
+      }
+
+      &__cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 104px 12px;
+      }
+
+      &__card {
+        &-img {
+          height: 33.33vw;
         }
       }
     }
