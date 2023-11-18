@@ -44,4 +44,10 @@
     /* height: 97.87vw; */
     height: 367px;
   }
+
+  @media screen and (min-width: 768px) {
+    .contact-map {
+      width: calc(100vw - 192px);
+    }
+  }
 </style>

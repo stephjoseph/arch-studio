@@ -30,6 +30,7 @@
   <div class="about-hero__img" style="background-image: url({bgImgSrc})"></div>
   <div class="about-hero__content">
     <div class="about-hero__content-wrapper">
+      <span class="about-hero__content-wrapper-text">About</span>
       <div class="about-hero__content-wrapper-eyebrow"></div>
       <h2>Your team of professionals</h2>
       <p>
@@ -79,6 +80,10 @@
         background: #fff;
         padding: 65px 0px 76px 32px;
 
+        &-text {
+          display: none;
+        }
+
         &-eyebrow {
           display: none;
         }
@@ -121,6 +126,19 @@
         &-wrapper {
           padding: 88px 56px 0px;
           gap: 40px;
+
+          &-text {
+            display: block;
+            position: absolute;
+            color: var(--very-light-grey);
+            font-size: 150px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 200px;
+            letter-spacing: -3px;
+            top: -85px;
+            right: 56px;
+          }
 
           &-eyebrow {
             display: block;
