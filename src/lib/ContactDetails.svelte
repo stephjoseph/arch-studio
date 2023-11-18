@@ -135,4 +135,34 @@
       }
     }
   }
+
+  @media screen and (min-width: 768px) {
+    .contact-details {
+      gap: 48px;
+      padding: 0px 0px 224px;
+
+      &__content {
+        h2 {
+          font-size: 72px;
+          line-height: 64px;
+          letter-spacing: -2px;
+        }
+      }
+
+      &__office {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 72px;
+
+        a {
+          margin-bottom: 12px;
+        }
+
+        &-wrapper {
+          max-width: 350px;
+        }
+      }
+    }
+  }
 </style>
