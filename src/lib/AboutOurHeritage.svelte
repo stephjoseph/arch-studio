@@ -69,4 +69,21 @@
       }
     }
   }
+
+  @media screen and (min-width: 768px) {
+    .about-our-heritage {
+      padding: 0px 0px 232px;
+      gap: 48px;
+
+      &__content {
+        gap: 64px;
+
+        h2 {
+          font-size: 72px;
+          line-height: 64px;
+          letter-spacing: -2px;
+        }
+      }
+    }
+  }
 </style>

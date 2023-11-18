@@ -1,10 +1,12 @@
 <script>
   import PortfolioProjects from "../lib/PortfolioProjects.svelte";
+  import PageName from "../lib/PageName.svelte";
 </script>
 
 <main>
   <h1>Arch Studio | Portfolio</h1>
   <PortfolioProjects />
+  <PageName name="Portfolio" />
 </main>
 
 <style lang="scss">

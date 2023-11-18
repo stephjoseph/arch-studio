@@ -27,11 +27,10 @@
 </script>
 
 <section class="about-hero">
-  <div class="about-hero__img" style="background-image: url({bgImgSrc})">
-    <div></div>
-  </div>
+  <div class="about-hero__img" style="background-image: url({bgImgSrc})"></div>
   <div class="about-hero__content">
     <div class="about-hero__content-wrapper">
+      <div class="about-hero__content-wrapper-eyebrow"></div>
       <h2>Your team of professionals</h2>
       <p>
         Our small team of world-class professionals will work with you every
@@ -64,10 +63,6 @@
       &:hover {
         background-size: 120%;
       }
-
-      div {
-        height: 64vw;
-      }
     }
 
     &__content {
@@ -84,6 +79,10 @@
         background: #fff;
         padding: 65px 0px 76px 32px;
 
+        &-eyebrow {
+          display: none;
+        }
+
         h2 {
           color: var(--very-dark-blue);
           font-size: 48px;
@@ -99,6 +98,43 @@
           font-style: normal;
           font-weight: 500;
           line-height: 24px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .about-hero {
+      position: relative;
+      margin-bottom: 200px;
+
+      &__img {
+        height: 720px;
+      }
+
+      &__content {
+        position: absolute;
+        bottom: 0;
+        right: -56px;
+        padding-right: 0px;
+
+        &-wrapper {
+          padding: 88px 56px 0px;
+          gap: 40px;
+
+          &-eyebrow {
+            display: block;
+            width: 64px;
+            height: 1px;
+            background: var(--light-grey);
+            margin-bottom: 32px;
+          }
+
+          h2 {
+            font-size: 72px;
+            line-height: 64px;
+            letter-spacing: -2px;
+          }
         }
       }
     }
