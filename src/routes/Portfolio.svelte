@@ -5,7 +5,6 @@
 <main>
   <h1>Arch Studio | Portfolio</h1>
   <PortfolioProjects />
-  <div>asdasdas</div>
 </main>
 
 <style lang="scss">
@@ -21,6 +20,12 @@
       visibility: hidden;
       width: 0;
       height: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    main {
+      padding: 0 96px;
     }
   }
 </style>
