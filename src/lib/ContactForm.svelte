@@ -1,5 +1,5 @@
 <script>
-  // your script goes here
+  import iconArrowWhite from "../assets/icons/icon-arrow-white.svg";
 </script>
 
 <section class="contact-form">
@@ -14,6 +14,7 @@
       rows="5"
       placeholder="Message"
     ></textarea>
+    <button type="submit"><img src={iconArrowWhite} alt="arrow icon" /></button>
   </form>
 </section>
 
@@ -23,7 +24,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 72px 32px 132px;
+    padding: 72px 32px 212px;
 
     h2 {
       color: var(--very-dark-blue);
@@ -39,6 +40,7 @@
       display: flex;
       flex-direction: column;
       gap: 44px;
+      position: relative;
 
       input {
         width: 100%;
@@ -83,6 +85,32 @@
         &::placeholder {
           color: var(--light-grey);
         }
+      }
+
+      button {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        position: absolute;
+        bottom: -80px;
+        right: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .contact-form {
+      padding: 200px 0px 280px;
+      gap: 64px;
+
+      h2 {
+        font-size: 72px;
+        line-height: 64px;
+        letter-spacing: -2px;
       }
     }
   }
