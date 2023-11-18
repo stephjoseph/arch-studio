@@ -32,12 +32,13 @@
   </div>
   <div class="contact-hero__content">
     <div class="contact-hero__content-wrapper">
-      <h2>Your team of professionals</h2>
+      <span class="contact-hero__content-wrapper-text">Contact</span>
+      <div class="contact-hero__content-wrapper-eyebrow"></div>
+      <h2>Tell us about your project</h2>
       <p>
-        Our small team of world-class professionals will work with you every
-        step of the way. Strong relationships are at the core of everything we
-        do. This extends to the relationship our projects have with their
-        surroundings.
+        We’d love to hear more about your project. Please, leave a message below
+        or give us a call. We have two offices, one in Texas and one in
+        Tennessee. If you find yourself nearby, come say hello!
       </p>
     </div>
   </div>
@@ -84,6 +85,14 @@
         background: #fff;
         padding: 65px 0px 76px 32px;
 
+        &-text {
+          display: none;
+        }
+
+        &-eyebrow {
+          display: none;
+        }
+
         h2 {
           color: var(--very-dark-blue);
           font-size: 48px;
@@ -99,6 +108,56 @@
           font-style: normal;
           font-weight: 500;
           line-height: 24px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .contact-hero {
+      position: relative;
+      margin-bottom: 200px;
+
+      &__img {
+        height: 720px;
+      }
+
+      &__content {
+        position: absolute;
+        bottom: 0;
+        right: -56px;
+        padding-right: 0px;
+
+        &-wrapper {
+          padding: 88px 56px 0px;
+          gap: 40px;
+          position: relative;
+
+          &-text {
+            display: block;
+            position: absolute;
+            color: var(--very-light-grey);
+            font-size: 150px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 200px;
+            letter-spacing: -3px;
+            top: -85px;
+            right: 56px;
+          }
+          &-eyebrow {
+            display: block;
+            width: 64px;
+            height: 1px;
+            background: var(--light-grey);
+            margin-bottom: 32px;
+          }
+
+          h2 {
+            font-size: 72px;
+            line-height: 64px;
+            letter-spacing: -2px;
+          }
         }
       }
     }
