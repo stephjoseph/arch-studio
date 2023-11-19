@@ -16,6 +16,7 @@
       image: {
         mobile: "/src/assets/home/mobile/image-hero-paramour.jpg",
         tablet: "/src/assets/home/tablet/image-hero-paramour.jpg",
+        desktop: "/src/assets/home/desktop/image-hero-paramour.jpg",
       },
     },
     {
@@ -25,6 +26,7 @@
       image: {
         mobile: "/src/assets/home/mobile/image-hero-seraph.jpg",
         tablet: "/src/assets/home/tablet/image-hero-seraph.jpg",
+        desktop: "/src/assets/home/desktop/image-hero-seraph.jpg",
       },
     },
     {
@@ -34,6 +36,7 @@
       image: {
         mobile: "/src/assets/home/mobile/image-hero-federal.jpg",
         tablet: "/src/assets/home/tablet/image-hero-federal.jpg",
+        desktop: "/src/assets/home/desktop/image-hero-federal.jpg",
       },
     },
     {
@@ -43,6 +46,7 @@
       image: {
         mobile: "/src/assets/home/mobile/image-hero-trinity.jpg",
         tablet: "/src/assets/home/tablet/image-hero-trinity.jpg",
+        desktop: "/src/assets/home/desktop/image-hero-trinity.jpg",
       },
     },
   ];
@@ -150,7 +154,9 @@
       <swiper-slide
         ><div
           class="swiper-slide"
-          style="background-image: url({windowWidth >= 768
+          style="background-image: url({windowWidth >= 1280
+            ? project.image.desktop
+            : windowWidth >= 768
             ? project.image.tablet
             : project.image.mobile})"
         >
