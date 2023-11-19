@@ -3,6 +3,7 @@
   import ContactDetails from "../lib/ContactDetails.svelte";
   import ContactMap from "../lib/ContactMap.svelte";
   import ContactForm from "../lib/ContactForm.svelte";
+  import PageName from "../lib/PageName.svelte";
 </script>
 
 <main>
@@ -11,6 +12,7 @@
   <ContactDetails />
   <ContactMap />
   <ContactForm />
+  <PageName name="contact" />
 </main>
 
 <style lang="scss">

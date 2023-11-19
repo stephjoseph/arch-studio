@@ -98,6 +98,14 @@
         bottom: -80px;
         right: 0;
         cursor: pointer;
+
+        &:hover {
+          background: var(--dark-grey);
+        }
+
+        &:active {
+          background: var(--light-grey);
+        }
       }
     }
   }
