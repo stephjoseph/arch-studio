@@ -15,7 +15,7 @@
 <Router {url}>
   <HeaderMobile />
   <Header />
-  <Route path="/" let:params><Home {params} /></Route>
+  <Route path="/" component={Home} />
   <Route path="/portfolio" component={Portfolio} />
   <Route path="/about" component={About} />
   <Route path="/contact" component={Contact} />
