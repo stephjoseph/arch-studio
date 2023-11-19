@@ -40,4 +40,11 @@
       display: flex;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .page-name {
+      display: flex;
+      left: 88px;
+    }
+  }
 </style>

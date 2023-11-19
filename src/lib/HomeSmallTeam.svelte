@@ -82,4 +82,21 @@
       }
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .home-small-team {
+      padding: 190px 167px;
+      background: url("/src/assets/home/desktop/image-small-team.jpg"),
+        rgba(0, 0, 0, 0.35);
+      background-repeat: no-repeat;
+      background-size: 130%;
+      background-position: center;
+      background-blend-mode: multiply;
+
+      &:hover,
+      &:active {
+        background-size: 150%;
+      }
+    }
+  }
 </style>

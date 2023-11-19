@@ -123,4 +123,24 @@
       }
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .footer {
+      padding: 0 165px;
+
+      &__wrapper {
+        width: 88.65%;
+        gap: 85px;
+      }
+
+      &__logo {
+        width: 200px;
+        height: 200px;
+      }
+
+      &__button {
+        right: -126px;
+      }
+    }
+  }
 </style>

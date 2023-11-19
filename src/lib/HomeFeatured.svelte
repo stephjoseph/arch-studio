@@ -10,6 +10,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-del-sol.jpg",
         tablet: "/src/assets/portfolio/tablet/image-del-sol.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-del-sol.jpg",
       },
     },
     {
@@ -17,6 +18,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-228b.jpg",
         tablet: "/src/assets/portfolio/tablet/image-228b.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-228b.jpg",
       },
     },
     {
@@ -24,6 +26,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-prototype.jpg",
         tablet: "/src/assets/portfolio/tablet/image-prototype.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-prototype.jpg",
       },
     },
   ];
@@ -54,7 +57,9 @@
       {#each projects as project, index (project)}
         <div
           class="home-featured__project"
-          style="background-image: url({windowWidth >= 768
+          style="background-image: url({windowWidth >= 1280
+            ? project.image.desktop
+            : windowWidth >= 768
             ? project.image.tablet
             : project.image.mobile})"
         >
@@ -216,6 +221,34 @@
 
         &--desktop {
           display: flex;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .home-featured {
+      gap: 64px;
+
+      &__heading {
+        h2 {
+          font-size: 72px;
+          line-height: 64px;
+          letter-spacing: -2px;
+        }
+      }
+
+      &__projects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+      }
+
+      &__project {
+        height: 560px;
+
+        &-number {
+          top: 45px;
+          right: -16px;
         }
       }
     }
