@@ -47,8 +47,93 @@
     },
   ];
 
-  // Update window width when the window is resized
   onMount(() => {
+    // swiper setup
+    const swiperEl = document.querySelector("swiper-container");
+
+    const params = {
+      injectStyles: [
+        `
+        .swiper-pagination {
+          display: none;
+        }
+
+        @media screen and (min-width: 1280px) {
+          .swiper-pagination {
+            display: flex;
+          }
+
+          .swiper {
+            position: static;
+          }
+
+          .swiper-pagination-bullet {
+            width: 80px;
+            height: 80px;
+            color: #7D828F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+            opacity: 1;
+            background: rgba(255, 255, 255, 1);
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+          }
+
+        .swiper-pagination-bullet-active {
+            color: #fff;
+            background: #1B1D23;
+          }
+        }
+
+        .swiper-horizontal > 
+          .swiper-pagination-bullets 
+          .swiper-pagination-bullet, 
+          .swiper-pagination-horizontal.swiper-pagination-bullets 
+          .swiper-pagination-bullet {
+            margin: 0;
+            z-index: 9999;
+        }
+
+        .swiper-horizontal > 
+        .swiper-pagination-bullets, 
+        .swiper-pagination-bullets.swiper-pagination-horizontal, 
+        .swiper-pagination-custom, 
+        .swiper-pagination-fraction {
+          width: auto;
+          left: -80px;
+          bottom:0;
+        }
+        `,
+      ],
+      slidesPerView: 1,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+
+      pagination: {
+        clickable: true,
+        renderBullet: function (index, className) {
+          return (
+            '<span class="' + className + '">' + "0" + (index + 1) + "</span>"
+          );
+        },
+      },
+    };
+
+    Object.assign(swiperEl, params);
+    swiperEl.initialize();
+
+    // Update window width when the window is resized
     window.addEventListener("resize", () => {
       windowWidth = window.innerWidth;
     });
@@ -57,20 +142,10 @@
       window.removeEventListener("resize", () => {});
     };
   });
-
-  const onSlideChange = (e) => {
-    console.log("slide changed");
-    activeIndex = e.detail[0].activeIndex;
-  };
 </script>
 
 <section class="home-hero">
-  <swiper-container
-    class="swiper-container"
-    slides-per-view={1}
-    autoplay={{ delay: 5000, disableOnInteraction: false }}
-    on:swiperslidechange={onSlideChange}
-  >
+  <swiper-container class="mySwiper" init="false">
     {#each projects as project, index (project)}
       <swiper-slide
         ><div
@@ -188,6 +263,17 @@
               letter-spacing: -2px;
             }
           }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .home-hero {
+      .swiper {
+        &-slide {
+          padding: 0 190px;
+          gap: 16px;
         }
       }
     }
