@@ -67,4 +67,10 @@
       display: flex;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .header {
+      padding: 56px 165px;
+    }
+  }
 </style>
