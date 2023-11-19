@@ -272,7 +272,7 @@
     .home-hero {
       .swiper {
         &-slide {
-          padding: 0 190px;
+          padding: 0 376px 0px 190px;
           gap: 16px;
         }
       }
