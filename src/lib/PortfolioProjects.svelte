@@ -9,6 +9,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-seraph.jpg",
         tablet: "/src/assets/portfolio/tablet/image-seraph.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-seraph.jpg",
       },
     },
     {
@@ -17,6 +18,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-eebox.jpg",
         tablet: "/src/assets/portfolio/tablet/image-eebox.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-eebox.jpg",
       },
     },
     {
@@ -25,6 +27,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-federal.jpg",
         tablet: "/src/assets/portfolio/tablet/image-federal.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-federal.jpg",
       },
     },
     {
@@ -33,6 +36,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-del-sol.jpg",
         tablet: "/src/assets/portfolio/tablet/image-del-sol.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-del-sol.jpg",
       },
     },
     {
@@ -41,6 +45,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-prototype.jpg",
         tablet: "/src/assets/portfolio/tablet/image-prototype.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-prototype.jpg",
       },
     },
     {
@@ -49,6 +54,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-228b.jpg",
         tablet: "/src/assets/portfolio/tablet/image-228b.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-228b.jpg",
       },
     },
     {
@@ -57,6 +63,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-edelweiss.jpg",
         tablet: "/src/assets/portfolio/tablet/image-edelweiss.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-edelweiss.jpg",
       },
     },
     {
@@ -65,6 +72,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-netcry.jpg",
         tablet: "/src/assets/portfolio/tablet/image-netcry.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-netcry.jpg",
       },
     },
     {
@@ -73,6 +81,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-hypers.jpg",
         tablet: "/src/assets/portfolio/tablet/image-hypers.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-hypers.jpg",
       },
     },
     {
@@ -81,6 +90,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-sxiv.jpg",
         tablet: "/src/assets/portfolio/tablet/image-sxiv.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-sxiv.jpg",
       },
     },
     {
@@ -89,6 +99,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-trinity.jpg",
         tablet: "/src/assets/portfolio/tablet/image-trinity.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-trinity.jpg",
       },
     },
     {
@@ -97,6 +108,7 @@
       image: {
         mobile: "/src/assets/portfolio/mobile/image-paramour.jpg",
         tablet: "/src/assets/portfolio/tablet/image-paramour.jpg",
+        desktop: "/src/assets/portfolio/desktop/image-paramour.jpg",
       },
     },
   ];
@@ -119,7 +131,9 @@
       {#each projects as project, index (project)}
         <div
           class="portfolio-projects__project"
-          style="background-image: url({windowWidth >= 768
+          style="background-image: url({windowWidth >= 1280
+            ? project.image.desktop
+            : windowWidth >= 768
             ? project.image.tablet
             : project.image.mobile})"
         >
@@ -223,6 +237,26 @@
       &__project {
         height: 31.25vw;
         padding: 40px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .portfolio-projects {
+      padding: 0px 0px 160px;
+
+      &__projects {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 32px;
+      }
+
+      &__project {
+        height: 560px;
+        background-size: 120%;
+
+        &:hover {
+          background-size: 140%;
+        }
       }
     }
   }
