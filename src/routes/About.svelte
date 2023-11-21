@@ -20,6 +20,7 @@
     flex-direction: column;
     align-items: center;
     background: #fff;
+    max-width: 1920px;
 
     h1 {
       position: absolute;
@@ -32,6 +33,12 @@
   @media screen and (min-width: 768px) {
     main {
       padding: 0 96px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    main {
+      padding: 0 165px;
     }
   }
 </style>

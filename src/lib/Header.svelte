@@ -30,6 +30,7 @@
     align-items: center;
     gap: 80px;
     background: #fff;
+    max-width: 1920px;
 
     &__logo {
       width: 96px;

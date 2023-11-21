@@ -43,6 +43,7 @@
     width: 100vw;
     /* height: 97.87vw; */
     height: 367px;
+    max-width: 1920px;
   }
 
   @media screen and (min-width: 768px) {
