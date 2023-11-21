@@ -22,6 +22,7 @@
     flex-direction: column;
     align-items: center;
     background: #fff;
+    max-width: 1920px;
 
     h1 {
       position: absolute;
