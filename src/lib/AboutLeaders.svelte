@@ -128,4 +128,28 @@
       }
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .about-leaders {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0px 0px 160px;
+
+      h2 {
+        width: 29.1%;
+      }
+
+      &__cards {
+        width: 65.77%;
+        gap: 64px 32px;
+      }
+
+      &__card {
+        &-img {
+          height: 22.22vw;
+          max-height: 456px;
+        }
+      }
+    }
+  }
 </style>
