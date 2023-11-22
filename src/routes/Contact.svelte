@@ -37,4 +37,10 @@
       padding: 0 96px;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    main {
+      padding: 0 165px;
+    }
+  }
 </style>

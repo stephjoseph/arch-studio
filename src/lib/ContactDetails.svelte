@@ -165,4 +165,38 @@
       }
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .contact-details {
+      gap: 72px;
+      padding: 0px 0px 160px;
+
+      &__content {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+
+        h2 {
+          width: 31.53%;
+        }
+      }
+
+      &__offices {
+        width: 65.77%;
+        flex-direction: row;
+        gap: 30px;
+      }
+
+      &__office {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 60px;
+
+        a {
+          margin-bottom: 0px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
 </style>

@@ -122,4 +122,20 @@
       }
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .contact-form {
+      flex-direction: row;
+      gap: 30px;
+      padding: 125px 0px 240px;
+
+      h2 {
+        width: 31.53%;
+      }
+
+      &__form {
+        width: 65.77%;
+      }
+    }
+  }
 </style>
