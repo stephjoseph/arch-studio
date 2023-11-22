@@ -162,4 +162,41 @@
       }
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .contact-hero {
+      &__img {
+        width: 57.21%;
+        background-size: 120%;
+        background-position: left center;
+
+        &:hover {
+          background-size: 140%;
+        }
+      }
+
+      &__content {
+        right: -156px;
+        width: 71.44%;
+
+        &-wrapper {
+          padding: 160px 145px 0px;
+          gap: 48px;
+
+          &-text {
+            font-size: 250px;
+            line-height: 200px;
+            letter-spacing: -5px;
+            top: -87px;
+            right: 0;
+            left: -198px;
+          }
+        }
+
+        &-eyebrow {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
 </style>
