@@ -52,4 +52,10 @@
       height: 560px;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .contact-map {
+      width: calc(100vw - 330px);
+    }
+  }
 </style>
