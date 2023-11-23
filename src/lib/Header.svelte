@@ -1,23 +1,41 @@
 <script>
   import { link } from "svelte-routing";
+  import { writable, get } from "svelte/store";
   import logo from "../assets/logo.svg";
+
+  let currentRoute = writable("");
+
+  const navItems = [
+    { text: "Portfolio", route: "/portfolio" },
+    { text: "About Us", route: "/about" },
+    { text: "Contact", route: "/contact" },
+  ];
+
+  $: currentRoute.set(window.location.pathname);
+
+  const setRoute = (route) => {
+    currentRoute.set(route);
+  };
 </script>
 
 <header class="header">
-  <a href="/" class="header__logo" use:link>
+  <a href="/" class="header__logo" on:click={() => setRoute("/")} use:link>
     <img src={logo} alt="logo" />
   </a>
   <nav class="header__nav">
     <ul>
-      <li>
-        <a href="/portfolio" use:link>Portfolio</a>
-      </li>
-      <li>
-        <a href="/about" use:link>About Us</a>
-      </li>
-      <li>
-        <a href="/contact" use:link>Contact</a>
-      </li>
+      {#each navItems as { text, route }}
+        <li>
+          <a
+            href={route}
+            class:active={$currentRoute === route}
+            on:click={() => setRoute(route)}
+            use:link
+          >
+            {text}
+          </a>
+        </li>
+      {/each}
     </ul>
   </nav>
 </header>
@@ -57,6 +75,26 @@
             font-style: normal;
             font-weight: 700;
             line-height: 25px;
+            position: relative;
+          }
+
+          a.active {
+            color: var(--very-dark-blue);
+
+            &::after {
+              content: "";
+              width: 24px;
+              height: 1px;
+              position: absolute;
+              bottom: -6px;
+              right: 16px;
+              background: var(--very-dark-blue);
+            }
+          }
+
+          a:hover,
+          a:active {
+            color: var(--very-dark-blue);
           }
         }
       }

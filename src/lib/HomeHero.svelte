@@ -92,30 +92,36 @@
             transition-duration: 300ms;
           }
 
-        .swiper-pagination-bullet-active {
-            color: #fff;
-            background: #1B1D23;
+          .swiper-pagination-bullet:hover {
+            background: #EEEFF4;
           }
-        }
 
-        .swiper-horizontal > 
+          .swiper-pagination-bullet-active {
+              color: #fff;
+              background: #1B1D23;
+            }
+
+          .swiper-horizontal > 
           .swiper-pagination-bullets 
           .swiper-pagination-bullet, 
           .swiper-pagination-horizontal.swiper-pagination-bullets 
           .swiper-pagination-bullet {
             margin: 0;
             z-index: 9999;
+          }
+
+          .swiper-horizontal > 
+          .swiper-pagination-bullets, 
+          .swiper-pagination-bullets.swiper-pagination-horizontal, 
+          .swiper-pagination-custom, 
+          .swiper-pagination-fraction {
+            width: auto;
+            left: -80px;
+            bottom:0;
+          }
         }
 
-        .swiper-horizontal > 
-        .swiper-pagination-bullets, 
-        .swiper-pagination-bullets.swiper-pagination-horizontal, 
-        .swiper-pagination-custom, 
-        .swiper-pagination-fraction {
-          width: auto;
-          left: -80px;
-          bottom:0;
-        }
+       
         `,
       ],
       slidesPerView: 1,
@@ -278,8 +284,14 @@
     .home-hero {
       .swiper {
         &-slide {
-          padding: 0 376px 0px 190px;
+          padding: 0 360px 0px 190px;
           gap: 16px;
+          background-size: 120%;
+
+          &:hover,
+          &:active {
+            background-size: 140%;
+          }
         }
       }
     }

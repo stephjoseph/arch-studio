@@ -68,6 +68,10 @@
             font-style: normal;
             font-weight: 700;
             line-height: 25px;
+
+            &:hover {
+              color: var(--very-dark-blue);
+            }
           }
         }
       }
