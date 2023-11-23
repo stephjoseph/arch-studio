@@ -58,6 +58,11 @@
             font-weight: 700;
             line-height: 25px;
           }
+
+          a:hover,
+          a:active {
+            color: var(--very-dark-blue);
+          }
         }
       }
     }

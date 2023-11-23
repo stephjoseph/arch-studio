@@ -245,6 +245,12 @@
 
       &__project {
         height: 560px;
+        background-size: 120%;
+
+        &:hover,
+        &:active {
+          background-size: 140%;
+        }
 
         &-number {
           top: 45px;
