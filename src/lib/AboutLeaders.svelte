@@ -1,4 +1,6 @@
 <script>
+  import iconLinkedIn from "../assets/icons/icon-linkedin.svg";
+  import iconTwitter from "../assets/icons/icon-twitter.svg";
   const leaders = [
     {
       name: "Jake Richards",
@@ -30,6 +32,10 @@
       <div class="about-leaders__card">
         <div class="about-leaders__card-img">
           <img src={leader.img} alt={leader.name} />
+          <div class="about-leaders__card-socials">
+            <a href="/"><img src={iconLinkedIn} alt="linkedin icon" /></a>
+            <a href="/"><img src={iconTwitter} alt="twitter icon" /></a>
+          </div>
         </div>
         <div class="about-leaders__card-details">
           <h3>{leader.name}</h3>
@@ -73,12 +79,46 @@
       &-img {
         width: 100%;
         height: 75vw;
+        position: relative;
+
+        &:hover,
+        &:active {
+          .about-leaders__card-socials {
+            opacity: 1;
+          }
+        }
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: top;
+        }
+      }
+
+      &-socials {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        a {
+          width: 40px;
+          display: inline-block;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
 
