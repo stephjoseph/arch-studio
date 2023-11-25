@@ -16,7 +16,7 @@
   };
 
   const iconOptions = {
-    iconUrl: "/src/assets/icons/icon-map-pin.svg",
+    iconUrl: "/assets/icons/icon-map-pin.svg",
     iconSize: [40, 48],
     iconAnchor: [20, 41],
     popupAnchor: [1, -34],
