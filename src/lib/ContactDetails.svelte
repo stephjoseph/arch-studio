@@ -102,6 +102,19 @@
         font-style: normal;
         font-weight: 700;
         line-height: 25px;
+
+        img {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover,
+        &:active {
+          text-decoration: underline;
+
+          img {
+            transform: translateX(8px);
+          }
+        }
       }
 
       &-wrapper {
