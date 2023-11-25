@@ -5,22 +5,22 @@
     {
       name: "Jake Richards",
       jobTitle: "Chief Architect",
-      img: "/src/assets/about/desktop/avatar-jake.jpg",
+      img: "/assets/about/desktop/avatar-jake.jpg",
     },
     {
       name: "Thompson Smith",
       jobTitle: "Head of Finance",
-      img: "/src/assets/about/desktop/avatar-thompson.jpg",
+      img: "/assets/about/desktop/avatar-thompson.jpg",
     },
     {
       name: "Jackson Rourke",
       jobTitle: "Lead Designer",
-      img: "/src/assets/about/desktop/avatar-jackson.jpg",
+      img: "/assets/about/desktop/avatar-jackson.jpg",
     },
     {
       name: "Maria Simpson",
       jobTitle: "Senior Architect",
-      img: "/src/assets/about/desktop/avatar-maria.jpg",
+      img: "/assets/about/desktop/avatar-maria.jpg",
     },
   ];
 </script>
