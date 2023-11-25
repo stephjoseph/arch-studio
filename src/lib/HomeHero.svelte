@@ -3,18 +3,18 @@
   import { register } from "swiper/element/bundle";
   import { link } from "svelte-routing";
   import iconArrowWhite from "../assets/icons/icon-arrow-white.svg";
-  import imgHeroParamourMobile from "../assets/home/mobile/image-hero-paramour.jpg";
-  import imgHeroParamourTablet from "../assets/home/tablet/image-hero-paramour.jpg";
-  import imgHeroParamourDesktop from "../assets/home/desktop/image-hero-paramour.jpg";
-  import imgHeroSeraphMobile from "../assets/home/mobile/image-hero-seraph.jpg";
-  import imgHeroSeraphTablet from "../assets/home/tablet/image-hero-seraph.jpg";
-  import imgHeroSeraphDesktop from "../assets/home/desktop/image-hero-seraph.jpg";
-  import imgHeroFederalMobile from "../assets/home/mobile/image-hero-federal.jpg";
-  import imgHeroFederalTablet from "../assets/home/tablet/image-hero-federal.jpg";
-  import imgHeroFederalDesktop from "../assets/home/desktop/image-hero-federal.jpg";
-  import imgHeroTrinityMobile from "../assets/home/mobile/image-hero-trinity.jpg";
-  import imgHeroTrinityTablet from "../assets/home/tablet/image-hero-trinity.jpg";
-  import imgHeroTrinityDesktop from "../assets/home/desktop/image-hero-trinity.jpg";
+  import imgHeroParamourMobile from "/assets/home/mobile/image-hero-paramour.jpg";
+  import imgHeroParamourTablet from "/assets/home/tablet/image-hero-paramour.jpg";
+  import imgHeroParamourDesktop from "/assets/home/desktop/image-hero-paramour.jpg";
+  import imgHeroSeraphMobile from "/assets/home/mobile/image-hero-seraph.jpg";
+  import imgHeroSeraphTablet from "/assets/home/tablet/image-hero-seraph.jpg";
+  import imgHeroSeraphDesktop from "/assets/home/desktop/image-hero-seraph.jpg";
+  import imgHeroFederalMobile from "/assets/home/mobile/image-hero-federal.jpg";
+  import imgHeroFederalTablet from "/assets/home/tablet/image-hero-federal.jpg";
+  import imgHeroFederalDesktop from "/assets/home/desktop/image-hero-federal.jpg";
+  import imgHeroTrinityMobile from "/assets/home/mobile/image-hero-trinity.jpg";
+  import imgHeroTrinityTablet from "/assets/home/tablet/image-hero-trinity.jpg";
+  import imgHeroTrinityDesktop from "/assets/home/desktop/image-hero-trinity.jpg";
 
   register();
 
