@@ -3,6 +3,18 @@
   import { register } from "swiper/element/bundle";
   import { link } from "svelte-routing";
   import iconArrowWhite from "../assets/icons/icon-arrow-white.svg";
+  import imgHeroParamourMobile from "../assets/home/mobile/image-hero-paramour.jpg";
+  import imgHeroParamourTablet from "../assets/home/tablet/image-hero-paramour.jpg";
+  import imgHeroParamourDesktop from "../assets/home/desktop/image-hero-paramour.jpg";
+  import imgHeroSeraphMobile from "../assets/home/mobile/image-hero-seraph.jpg";
+  import imgHeroSeraphTablet from "../assets/home/tablet/image-hero-seraph.jpg";
+  import imgHeroSeraphDesktop from "../assets/home/desktop/image-hero-seraph.jpg";
+  import imgHeroFederalMobile from "../assets/home/mobile/image-hero-federal.jpg";
+  import imgHeroFederalTablet from "../assets/home/tablet/image-hero-federal.jpg";
+  import imgHeroFederalDesktop from "../assets/home/desktop/image-hero-federal.jpg";
+  import imgHeroTrinityMobile from "../assets/home/mobile/image-hero-trinity.jpg";
+  import imgHeroTrinityTablet from "../assets/home/tablet/image-hero-trinity.jpg";
+  import imgHeroTrinityDesktop from "../assets/home/desktop/image-hero-trinity.jpg";
 
   register();
 
@@ -14,9 +26,9 @@
       description:
         "Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.",
       image: {
-        mobile: "/src/assets/home/mobile/image-hero-paramour.jpg",
-        tablet: "/src/assets/home/tablet/image-hero-paramour.jpg",
-        desktop: "/src/assets/home/desktop/image-hero-paramour.jpg",
+        mobile: imgHeroParamourMobile,
+        tablet: imgHeroParamourTablet,
+        desktop: imgHeroParamourDesktop,
       },
     },
     {
@@ -24,9 +36,9 @@
       description:
         "The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.",
       image: {
-        mobile: "/src/assets/home/mobile/image-hero-seraph.jpg",
-        tablet: "/src/assets/home/tablet/image-hero-seraph.jpg",
-        desktop: "/src/assets/home/desktop/image-hero-seraph.jpg",
+        mobile: imgHeroSeraphMobile,
+        tablet: imgHeroSeraphTablet,
+        desktop: imgHeroSeraphDesktop,
       },
     },
     {
@@ -34,9 +46,9 @@
       description:
         "A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.",
       image: {
-        mobile: "/src/assets/home/mobile/image-hero-federal.jpg",
-        tablet: "/src/assets/home/tablet/image-hero-federal.jpg",
-        desktop: "/src/assets/home/desktop/image-hero-federal.jpg",
+        mobile: imgHeroFederalMobile,
+        tablet: imgHeroFederalTablet,
+        desktop: imgHeroFederalDesktop,
       },
     },
     {
@@ -44,9 +56,9 @@
       description:
         "Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.",
       image: {
-        mobile: "/src/assets/home/mobile/image-hero-trinity.jpg",
-        tablet: "/src/assets/home/tablet/image-hero-trinity.jpg",
-        desktop: "/src/assets/home/desktop/image-hero-trinity.jpg",
+        mobile: imgHeroTrinityMobile,
+        tablet: imgHeroTrinityTablet,
+        desktop: imgHeroTrinityDesktop,
       },
     },
   ];
